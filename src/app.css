@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cutive+Mono&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=GFS+Didot&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sawarabi+Gothic&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'GFS Didot';
+}
+
+:root {
+    --PrimaryColor: goldenrod;
+    --SecondaryColor: rgb(152, 113, 14);
+    --textColor: rgb(202, 163, 113);
+    --iconColor: antiquewhite;
+    --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
+    --backgroundColor: rgba(0, 0, 0, 0.4);
+    --whiteColor: white;
+    --blackColor: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    font-style: 'Italianno', 'Helvetica', serif;
+    color: var(--textColor);
+    background: linear-gradient(to right, var(--SecondaryColor), var(--PrimaryColor));
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: rgb(19, 17, 13);
+}

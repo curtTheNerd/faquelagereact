@@ -1,0 +1,188 @@
+:root {
+    --PrimaryColor: goldenrod;
+    --SecondaryColor: rgb(152, 113, 14);
+    --textColor: antiquewhite;
+    --iconColor: antiquewhite;
+    --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
+    --backgroundColor: rgba(0, 0, 0, 0.2);
+    --whiteColor: white;
+    --blackColor: black;
+}
+
+.main {
+    width: 90%;
+    background: var(--backgroundColor);
+    margin: 0 auto;
+    padding-top: 20vh;
+    
+
+    .secTitle {
+        display: flex;
+        justify-content: center;
+        
+        .mainTitle {
+            position: relative;
+            color: var(--PrimaryColor);
+            font-family: 'EB Garamond', Helvetica, serif;
+            font-size: 2.5rem;
+            padding-bottom: 3rem;
+            padding-top: 2rem;
+        }
+    }
+
+    .secContent {
+        justify-content: center;
+        align-items: start;
+        gap: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .newsCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            min-width: 350px;
+            max-height: auto;
+            overflow: hidden; 
+            border: 2px solid rgb(24, 20, 12);
+            border-radius: 4px;
+            background: var(--backgroundColor);
+            padding-bottom: 25px;
+            margin: 15px auto;
+            transition: 0.5s;
+
+            &:hover{
+                transition: 1s;
+                transform: scale(1.05);
+                box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.7);
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+            img {
+                width: 100%;
+                max-width: 350px;
+                padding-bottom: 1vh;
+            }
+
+            .cardInfo {
+                padding: 20px;
+                line-height: 1.5;
+
+                .title {
+                    font-family: Garamond, Helvetica, serif;
+                    font-size: 1.75rem;
+                    color: var(--PrimaryColor);
+                }
+    
+                .subtitle {
+                    font-family: Garamond, Helvetica, serif;
+                    font-size: 1.25rem;
+                    padding-bottom: 10px;
+                    color: var(--SecondaryColor);
+                }
+    
+                .description, .link{
+                    font-family: Garamond, Helvetica, serif;
+                    font-size: 1rem;
+                    color: rgb(182, 136, 22);
+                }
+    
+                .linkName {
+                    font-family: Garamond, Helvetica, serif;
+                    font-size: 1.1rem;
+                    color: var(--PrimaryColor);
+                    padding-left: 5px;
+                    transition: 0.3s;
+    
+                    &:hover {
+                        color: rgb(255, 230, 167);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .main {
+        width: 100%;
+        padding-top: 15vh;
+        
+        .secTitle {
+            .mainTitle {
+                font-size: 2.25rem;
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        padding-top: 13vh;
+        
+        .secTitle {
+            .mainTitle {
+                font-size: 2.25rem;
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        width: 100%;
+        padding-top: 10vh;
+        
+        .secTitle {
+            .mainTitle {
+                font-size: 1.9rem;
+            }
+        }
+
+        .secContent {
+            justify-content: center;
+
+            .newsCard {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                margin: 0 auto;
+
+                img {
+                    max-width: 350px;
+                    max-height: 350px;
+                    padding-bottom: 1rem;
+                }
+
+                .cardInfo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+
+                    .title, .linkName {
+                        font-size: 1.35rem;
+                        font-weight: 600;
+                        display: flex;
+                        justify-items: center;
+                        padding: 0.2rem;
+                    }
+
+                    .subtitle {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        display: flex;
+                        justify-items: center;
+                        padding: 0.2rem;
+                    }
+                }
+            }
+        }
+    }  
+}

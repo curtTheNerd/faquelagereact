@@ -1,0 +1,170 @@
+:root {
+  --PrimaryColor: goldenrod;
+  --PrimaryColorBG: rgba(218, 165, 32, 0.5);
+  --SecondaryColor: rgb(152, 113, 14);
+  --textColor: antiquewhite;
+  --textColorNegative: rgb(64, 59, 53);
+  --iconColor: antiquewhite;
+  --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
+  --backgroundColor1: rgba(0, 0, 0, 0.75);
+  --backgroundColor2: rgba(0, 0, 0, 0.4);
+  --whiteColor: white;
+  --blackColor: black;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--backgroundColor1);
+  font-style: "Garamond", "Helvetica", serif;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.header .logo {
+  color: var(--PrimaryColor);
+  align-items: center;
+  justify-content: center;
+}
+.header .logo .icon {
+  color: var(--SecondaryColor);
+  transform: translateY(7px);
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+}
+.header .logo .title {
+  font-size: 1.75rem;
+  font-style: "Garamond", "Helvetica", serif;
+  transform: translateY(4px);
+  margin-left: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .header .navBar {
+    position: absolute;
+    background: var(--backgroundColor1);
+    height: -moz-max-content;
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -25rem;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+    transition: 0.2s ease-in-out;
+  }
+  .header .navBar .navList {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .header .navBar .navList .navItem {
+    padding: 0.5rem 0;
+  }
+  .header .navBar .navList .navItem .navLink {
+    color: var(--textColor);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: "Garamond", "Helvetica", serif;
+    transition: 0.5s ease;
+  }
+  .header .navBar .navList .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+    transition: 0.5s ease;
+  }
+  .header .navBar .navList .btn {
+    margin-top: 1rem;
+  }
+  .header .navBar .navList .btn p {
+    color: var(--whiteColor);
+  }
+  .header .navBar .navList .btn:hover {
+    background: var(--gradientColor);
+  }
+  .header .navBar .navList .btn:hover p {
+    color: var(--SecondaryColor);
+  }
+  .header .navBar .closeNavBar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--PrimaryColor);
+  }
+  .header .navBar .closeNavBar:hover {
+    color: var(--SecondaryColor);
+    transition: 0.5s;
+  }
+  .header .activeNavBar {
+    top: 7rem;
+    background: rgba(0, 0, 0, 0.95);
+    width: 90vw;
+  }
+}
+.header .toggleNavBar .icon {
+  font-size: 30px;
+  color: var(--PrimaryColor);
+  transform: translateY(7px);
+}
+.header .toggleNavBar:hover .icon {
+  color: var(--SecondaryColor);
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 769px) {
+  .toggleNavBar, .closeNavBar {
+    display: none;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .navBar .navList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .header .navBar .navList .navItem .navLink {
+    color: var(--textColor);
+    padding: 0.2rem 0.7rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.75s ease;
+    border-radius: 0.75rem;
+  }
+  .header .navBar .navList .navItem .navLink:hover {
+    background-color: var(--PrimaryColorBG);
+    border-radius: 0.75rem;
+    transition: 0.75s ease;
+  }
+  .header .navBar .navList .btn {
+    margin-left: 1rem;
+  }
+  .header .navBar .navList .btn p {
+    color: var(--whiteColor);
+  }
+  .header .navBar .navList .btn:hover {
+    background: var(--gradientColor);
+  }
+  .header .navBar .navList .btn:hover p {
+    color: var(--SecondaryColor);
+  }
+}
+@media screen and (min-width: 960px) {
+  .header .navBar .navList {
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem, 8rem;
+  }
+}/*# sourceMappingURL=navbar.css.map */

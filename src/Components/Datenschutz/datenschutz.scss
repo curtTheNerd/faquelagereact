@@ -1,0 +1,66 @@
+:root {
+    --PrimaryColor: goldenrod;
+    --SecondaryColor: rgb(152, 113, 14);
+    --textColor: antiquewhite;
+    --iconColor: antiquewhite;
+    --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
+    --backgroundColor: rgba(0, 0, 0, 0.2);
+    --whiteColor: white;
+    --blackColor: black;
+}
+
+.datenschutzMain {
+    width: 100%;
+    background: var(--backgroundColor);
+    margin: auto;
+    padding-top: 25vh;
+    padding-bottom: 10vh;
+
+    .datenschutzTitle {
+        display: flex;
+        justify-content: center;
+        font-family: Garamond, Helvetica, serif;
+        font-size: 2rem;
+        color: var(--textColor);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 10vh;
+    }
+
+    .datenschutz {
+        width: 80%;
+        font-family: Garamond, Helvetica, serif;
+        font-size: 1.05rem;
+        color: var(--textColor);
+        line-height: 1.5;
+        padding-bottom: 10vh;
+        margin: auto;
+    }
+
+    .impressum {
+        width: 70%;
+        font-family: Garamond, Helvetica, serif;
+        font-size: 1.05rem;
+        color: var(--textColor);
+        line-height: 1.5;
+        padding-bottom: 10vh;
+        margin: auto;
+    }
+
+    .tabbed {
+        font-family: Garamond, Helvetica, serif;
+        font-size: 1.15rem;
+        color: var(--textColor);
+        padding-left: 2%;
+        line-height: 1.5;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .datenschutzMain {
+        .datenschutzTitle {
+            font-size: 1.8rem;
+        }
+    }
+}

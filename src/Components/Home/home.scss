@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cutive+Mono&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=GFS+Didot&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sawarabi+Gothic&display=swap');
+
+:root {
+    --PrimaryColor: goldenrod;
+    --SecondaryColor: rgb(152, 113, 14);
+    --textColor: antiquewhite;
+    --iconColor: antiquewhite;
+    --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
+    --backgroundColor: rgba(0, 0, 0, 0.4);
+    --whiteColor: white;
+    --blackColor: black;
+}
+
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 1;       
+    }
+    
+    img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .homeContent {
+        width: 100%;
+        height: max-content;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: var(--whiteColor);
+        z-index: 100;
+
+        .textDiv {
+            padding: 2rem 0;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                font-size: 3rem;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+
+                .h1_1 {
+                    font-family: 'Garamond', 'Helvetica, serif;';
+                    color: var(--PrimaryColor);
+                    text-shadow: 1px 1px 4px rgb(162, 120, 14);
+                    
+                }
+                .h1_2 {
+                    font-family: "Cedarville Cursive", 'Helvetica', serif;
+                    color: var(--PrimaryColor);
+                    text-shadow: 1px 1px 2px rgb(162, 120, 14);
+                }
+            }
+
+            .subtitle {
+                position: relative;
+                font-size: 1.5rem;
+                color: var(--PrimaryColor);
+                font-family: 'Garamond', Helvetica, serif;
+                font-weight: 500;
+                font-style: italic;              
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        height: 50vh;
+        
+        img {
+            margin-top: 3rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 21vh;
+
+                .title {
+                    font-size: 3rem;
+                }
+
+                .subtitle {
+                    padding-left: 40%; 
+                }
+            }
+        }
+    }    
+}
+@media screen and (min-width: 769px) {
+    .home {
+        height: 70vh;
+        
+        img {
+            margin-top: 4rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 37vh;
+
+                .title {
+                    font-size: 4rem;
+                }
+    
+                .subtitle {
+                    font-size: 2rem;
+                    padding-left: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .home {
+        height: 85vh;
+        
+        img {
+            margin-top: 4rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 50vh;
+
+                .title {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .home {
+        height: 100vh;
+        
+        img {
+            margin-top: 4rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 60vh;
+
+                .title {
+                    font-size: 5rem;
+                    padding-bottom: 0;
+                }
+    
+                .subtitle {
+                    font-size: 2.5rem;
+                    padding-left: 50%;
+                }
+            }
+        }
+    }    
+}
+
+/*
+.slideShowContainer {
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.slideShowImage {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    transition: left 0.5s;
+    left: 0;
+}
+*/
