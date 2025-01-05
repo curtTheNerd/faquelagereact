@@ -1,14 +1,3 @@
-:root {
-  --PrimaryColor: goldenrod;
-  --SecondaryColor: rgb(152, 113, 14);
-  --textColor: antiquewhite;
-  --iconColor: antiquewhite;
-  --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
-  --backgroundColor: rgba(0, 0, 0, 0.2);
-  --whiteColor: white;
-  --blackColor: black;
-}
-
 .about {
   width: 90%;
   background: var(--backgroundColor);
@@ -28,7 +17,7 @@
   font-family: Garamond, Helvetica, serif;
   font-size: 1.2rem;
   font-weight: 550;
-  color: var(--PrimaryColor);
+  color: rgb(218, 195, 142);
   text-align: center;
   line-height: 1.75;
   max-width: 80%;
@@ -38,7 +27,7 @@
 .about .presseText2 {
   font-family: Garamond, Helvetica, serif;
   font-size: 1.2rem;
-  color: var(--textColor);
+  color: rgb(218, 195, 142);
   text-align: center;
   line-height: 1.75;
   max-width: 80%;

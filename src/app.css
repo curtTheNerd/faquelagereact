@@ -8,14 +8,16 @@
 }
 
 :root {
-    --PrimaryColor: goldenrod;
+    --PrimaryColor: rgb(203, 161, 55);
     --SecondaryColor: rgb(152, 113, 14);
-    --textColor: rgb(202, 163, 113);
+    --textColor: rgb(218, 195, 142);
     --iconColor: antiquewhite;
     --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
     --backgroundColor: rgba(0, 0, 0, 0.4);
     --whiteColor: white;
     --blackColor: black;
+    --PrimaryColorBG: rgba(218, 165, 32, 0.5);
+    --textColorNegative: rgb(64, 59, 53);
 }
 
 a {

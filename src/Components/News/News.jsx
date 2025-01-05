@@ -47,18 +47,20 @@ const News = () => {
         {
           Data.map(({id, imgSrc, title, subtitle, text, link, linkName}) => {
             return (
-              <div key={id} className='newsCard'>
-                <div className="imageDiv">
-                  <img src={imgSrc} alt={title} />
-                </div> 
+              <a href={link} target="_blank">
+                <div key={id} className='newsCard'>
+                  <div className="imageDiv">
+                    <img src={imgSrc} alt={title} />
+                  </div> 
 
-                <div className="cardInfo">
-                  <h4 className="title">{title}</h4>
-                  <h5 className="subtitle">{subtitle}</h5>
-                  <h5 className="text">{text}</h5>
-                  <h5 className="link"><a href={link} className="linkName" target='_blank'>{linkName}</a></h5>
+                  <div className="cardInfo">
+                    <h4 className="title">{title}</h4>
+                    <h5 className="subtitle">{subtitle}</h5>
+                    <h5 className="text">{text}</h5>
+                    <h5 className="link"><div className="linkName">{linkName}</div></h5>
+                  </div>
                 </div>
-              </div>
+              </a>
             )
           })
         }
