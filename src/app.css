@@ -1,68 +1,817 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cutive+Mono&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=GFS+Didot&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sawarabi+Gothic&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cutive+Mono&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=GFS+Didot&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sawarabi+Gothic&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'GFS Didot';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "GFS Didot";
 }
 
 :root {
-    --PrimaryColor: rgb(203, 161, 55);
-    --SecondaryColor: rgb(152, 113, 14);
-    --textColor: rgb(218, 195, 142);
-    --iconColor: antiquewhite;
-    --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
-    --backgroundColor: rgba(0, 0, 0, 0.4);
-    --whiteColor: white;
-    --blackColor: black;
-    --PrimaryColorBG: rgba(218, 165, 32, 0.5);
-    --textColorNegative: rgb(64, 59, 53);
+  --PrimaryColor: rgb(203, 161, 55);
+  --SecondaryColor: rgb(152, 113, 14);
+  --textColor: rgb(218, 195, 142);
+  --iconColor: antiquewhite;
+  --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
+  --backgroundColor1: rgba(0, 0, 0, 0.4);
+  --backgroundColor2: rgba(0, 0, 0, 0.2);
+  --whiteColor: white;
+  --blackColor: black;
+  --PrimaryColorBG: rgba(218, 165, 32, 0.5);
+  --textColorNegative: rgb(64, 59, 53);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .section {
-    padding: 4rem 0 2rem;
+  padding: 4rem 0 2rem;
 }
 
 .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .icon {
-    font-size: 2rem;
-    cursor: pointer;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .flex {
-    display: flex;
-    align-items: center;
-}
-
-.grid {
-    display: grid;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .btn {
-    padding: 0.6rem 1.5rem;
-    font-style: 'Italianno', 'Helvetica', serif;
-    color: var(--textColor);
-    background: linear-gradient(to right, var(--SecondaryColor), var(--PrimaryColor));
-    border-radius: 3rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  font-style: "Italianno", "Helvetica", serif;
+  color: var(--textColor);
+  background: linear-gradient(to right, var(--SecondaryColor), var(--PrimaryColor));
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 body {
-    background-color: rgb(19, 17, 13);
+  background-color: rgb(19, 17, 13);
 }
+
+.home {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.home img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+.home .homeContent {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--whiteColor);
+  z-index: 100;
+}
+.home .homeContent .textDiv {
+  padding: 2rem 0;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.home .homeContent .textDiv .title {
+  font-size: 3rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.home .homeContent .textDiv .title .h1_1 {
+  font-family: "Garamond", "Helvetica, serif;";
+  color: var(--PrimaryColor);
+  text-shadow: 1px 1px 4px rgb(162, 120, 14);
+}
+.home .homeContent .textDiv .title .h1_2 {
+  font-family: "Cedarville Cursive", "Helvetica", serif;
+  color: var(--PrimaryColor);
+  text-shadow: 1px 1px 2px rgb(162, 120, 14);
+}
+.home .homeContent .textDiv .subtitle {
+  position: relative;
+  font-size: 1.5rem;
+  color: var(--PrimaryColor);
+  font-family: "Garamond", Helvetica, serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    height: 50vh;
+  }
+  .home img {
+    margin-top: 3rem;
+  }
+  .home .homeContent .textDiv {
+    padding-top: 21vh;
+  }
+  .home .homeContent .textDiv .title {
+    font-size: 3rem;
+  }
+  .home .homeContent .textDiv .subtitle {
+    padding-left: 40%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .home {
+    height: 70vh;
+  }
+  .home img {
+    margin-top: 4rem;
+  }
+  .home .homeContent .textDiv {
+    padding-top: 37vh;
+  }
+  .home .homeContent .textDiv .title {
+    font-size: 4rem;
+  }
+  .home .homeContent .textDiv .subtitle {
+    font-size: 2rem;
+    padding-left: 40%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .home {
+    height: 85vh;
+  }
+  .home img {
+    margin-top: 4rem;
+  }
+  .home .homeContent .textDiv {
+    padding-top: 50vh;
+  }
+  .home .homeContent .textDiv .title {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .home {
+    height: 100vh;
+  }
+  .home img {
+    margin-top: 4rem;
+  }
+  .home .homeContent .textDiv {
+    padding-top: 60vh;
+  }
+  .home .homeContent .textDiv .title {
+    font-size: 5rem;
+    padding-bottom: 0;
+  }
+  .home .homeContent .textDiv .subtitle {
+    font-size: 2.5rem;
+    padding-left: 50%;
+  }
+}
+/*
+.slideShowContainer {
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.slideShowImage {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    transition: left 0.5s;
+    left: 0;
+}
+*/
+.news {
+  width: 90%;
+  background: var(--backgroundColor2);
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.news .newsTitle {
+  font-size: 2rem;
+  color: var(--PrimaryColor);
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.news .newsSecContent {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.news .newsSecContent .newsCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-height: auto;
+  overflow: hidden;
+  border: 1px solid rgb(24, 20, 12);
+  border-radius: 4px;
+  background: var(--backgroundColor);
+  margin: 15px auto;
+}
+.news .newsSecContent .newsCard:hover {
+  transition: 1s;
+  box-shadow: 0 0 15px 15px rgb(19, 19, 19);
+}
+.news .newsSecContent .newsCard img {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
+.news .newsSecContent .newsCard .newsCardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  margin: auto;
+}
+.news .newsSecContent .newsCard .newsCardInfo .newsCardTitle {
+  font-size: 1.9rem;
+  color: var(--PrimaryColor);
+  padding-bottom: 1rem;
+}
+.news .newsSecContent .newsCard .newsCardInfo .newsLinkName {
+  font-size: 1.6rem;
+  color: var(--PrimaryColor);
+  transition: 0.3s;
+}
+.news .newsSecContent .newsCard .newsCardInfo .newsLinkName:hover {
+  color: var(--textColor);
+  transition: 0.3s;
+}
+.news .newsSecContent .newsCard .newsCardInfo .newsCardSubtitle, .news .newsSecContent .newsCard .newsCardInfo .newsText, .news .newsSecContent .newsCard .newsCardInfo .newsLink {
+  font-size: 1.4rem;
+  color: var(--SecondaryColor);
+  padding: 0 20px 0 20px;
+  margin: auto;
+}
+
+@media screen and (max-width: 959px) {
+  .news {
+    width: 100%;
+  }
+  .news .newsSecContent .newsCard {
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+    width: 100%;
+  }
+  .news .newsSecContent .newsCard img {
+    margin: 1rem auto 2rem auto;
+    padding: 0.2rem;
+  }
+  .news .newsSecContent .newsCard .newsCardInfo {
+    margin: 0 auto 2rem auto;
+  }
+  .news .newsSecContent .newsCard .newsCardInfo .newsCardTitle {
+    font-size: 1.75rem;
+  }
+  .news .newsSecContent .newsCard .newsCardInfo .newsLinkName {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .news {
+    width: 100%;
+  }
+  .news .newsSecContent .newsCard .newsCardInfo {
+    margin: 0 auto 2rem auto;
+  }
+  .news .newsSecContent .newsCard .newsCardInfo .newsCardTitle {
+    font-size: 1.35rem;
+  }
+  .news .newsSecContent .newsCard .newsCardInfo .newsLinkName {
+    font-size: 1.3rem;
+  }
+}
+.about {
+  width: 90%;
+  background: var(--backgroundColor2);
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.about .aboutTitle {
+  font-size: 2rem;
+  color: var(--PrimaryColor);
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.about .presseText1 {
+  font-size: 1.25rem;
+  color: var(--textColor);
+  text-align: center;
+  line-height: 1.75;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 45px;
+}
+.about .presseText2 {
+  font-size: 1.25rem;
+  color: var(--textColor);
+  text-align: center;
+  line-height: 1.75;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 45px;
+}
+.about .aboutSecContent {
+  justify-content: center;
+  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.about .aboutSecContent .aboutCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  min-width: 350px;
+  max-height: auto;
+  overflow: hidden;
+  border: 1px solid rgb(24, 20, 12);
+  border-radius: 4px;
+  background: var(--backgroundColor1);
+  padding-bottom: 25px;
+  margin: 15px auto;
+  transition: 0.5s;
+}
+.about .aboutSecContent .aboutCard:hover {
+  transition: 1s;
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px var(--SecondaryColor);
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+}
+.about .aboutSecContent .aboutCard img {
+  width: 350px;
+  height: 350px;
+  padding-bottom: 1vh;
+}
+.about .aboutSecContent .aboutCard .aboutCardInfo {
+  padding: 20px;
+  line-height: 1.5;
+}
+.about .aboutSecContent .aboutCard .aboutName {
+  font-size: 1.75rem;
+  color: var(--PrimaryColor);
+  padding-bottom: 15px;
+  text-align: center;
+}
+.about .aboutSecContent .aboutCard .aboutLinkName {
+  font-size: 1.25rem;
+  color: var(--PrimaryColor);
+  padding-left: 5px;
+  transition: 0.3s;
+}
+.about .aboutSecContent .aboutCard .aboutLinkName:hover {
+  color: rgb(255, 230, 167);
+  transition: 0.3s;
+}
+.about .aboutSecContent .aboutCard .aboutInstrument, .about .aboutSecContent .aboutCard .aboutSkill, .about .aboutSecContent .aboutCard .aboutLink {
+  font-size: 1.1rem;
+  color: rgb(182, 136, 22);
+  padding: 0 20px 0 20px;
+}
+.about .modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+}
+.about .modal .modalCard {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.about .modal .modalCard img {
+  max-width: 500px;
+  max-height: 500px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .modal .modalCard .aboutCardInfo {
+  padding: 20px;
+  padding-left: 50px;
+  line-height: 1.5;
+}
+.about .modal .modalCard .aboutName {
+  font-size: 1.75rem;
+  color: var(--PrimaryColor);
+  padding-bottom: 15px;
+  text-align: center;
+}
+.about .modal .modalCard .aboutLinkName {
+  font-size: 1.1rem;
+  color: var(--PrimaryColor);
+  padding-left: 5px;
+  transition: 0.3s;
+}
+.about .modal .modalCard .aboutLinkName:hover {
+  color: rgb(255, 230, 167);
+  transition: 0.3s;
+}
+.about .modal .modalCard .aboutInstrument, .about .modal .modalCard .aboutSkill, .about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
+  font-size: 1.1rem;
+  color: var(--PrimaryColor);
+  padding: 0 20px 0 20px;
+}
+.about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
+  padding-top: 15px;
+}
+.about .modal .modalClose {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: rgb(100, 100, 100);
+  font-size: 40px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.about .modal .modalPrev, .about .modal .modalNext {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: rgb(100, 100, 100);
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+.about .modal .modalPrev {
+  left: 0;
+}
+.about .modal .modalNext {
+  right: 0;
+  padding-right: 35px;
+}
+.about .modal .modalClose:hover, .about .modal .modalPrev:hover, .about .modal .modalNext:hover {
+  color: antiquewhite;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 959px) {
+  .about {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+  }
+  .about .modal .modalCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  .about .modal .modalCard img {
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: auto;
+    padding: 1px;
+  }
+  .about .modal .modalCard .aboutCardInfo {
+    padding-left: 50px;
+    line-height: 1.5;
+  }
+  .about .modal .modalCard .aboutName {
+    font-size: 1.75rem;
+    color: var(--PrimaryColor);
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .about .modal .modalCard .aboutLinkName {
+    font-size: 1.1rem;
+    color: var(--PrimaryColor);
+    padding-left: 5px;
+    transition: 0.3s;
+  }
+  .about .modal .modalCard .aboutInstrument, .about .modal .modalCard .aboutSkill, .about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
+    font-size: 1rem;
+    color: rgb(182, 136, 22);
+    padding: 0 20px 0 20px;
+  }
+  .about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
+    padding-top: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about .aboutSecContent {
+    justify-content: center;
+  }
+  .about .aboutSecContent .aboutCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .about .aboutSecContent .aboutCard img {
+    max-width: 350px;
+    max-height: 350px;
+    padding-bottom: 1rem;
+  }
+  .about .aboutSecContent .aboutCard .aboutCardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .about .aboutSecContent .aboutCard .aboutCardInfo .aboutName, .about .aboutSecContent .aboutCard .aboutCardInfo .aboutInstrument, .about .aboutSecContent .aboutCard .aboutCardInfo .aboutSkill, .about .aboutSecContent .aboutCard .aboutCardInfo .aboutLink {
+    display: flex;
+    justify-items: center;
+    font-weight: 600;
+    padding: 0.2rem;
+  }
+}
+.tour {
+  width: 90%;
+  background: var(--backgroundColor2);
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.tour .tourTitle {
+  font-size: 2rem;
+  color: var(--PrimaryColor);
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.tour .tourSecContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.tour .tourSecContent .tourCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  max-height: auto;
+  overflow: hidden;
+  border: 1px solid rgb(24, 20, 12);
+  border-radius: 4px;
+  background: var(--backgroundColor);
+  margin: 0.5rem auto;
+  transition: 0.5s;
+}
+.tour .tourSecContent .tourCard:hover {
+  transition: 1s;
+  transform: scale(1.025);
+  box-shadow: 0 0 2px 2px rgb(19, 19, 19);
+  border: none;
+}
+.tour .tourSecContent .tourCard .tourCardInfo {
+  padding: 20px;
+  line-height: 1.5;
+}
+.tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle .tourPlace {
+  font-size: 1.8rem;
+  color: var(--textColor);
+  padding-bottom: 15px;
+  padding-right: 50px;
+  text-align: center;
+}
+.tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle .tourDate {
+  font-size: 1.8rem;
+  color: var(--textColor);
+  padding-bottom: 15px;
+  right: 5rem;
+}
+.tour .tourSecContent .tourCard .tourCardInfo .tourLocation {
+  font-size: 1.6rem;
+  color: var(--textColor);
+  transition: 0.3s;
+  text-align: center;
+  padding: 0;
+}
+.tour .tourSecContent .tourCard .tourCardInfo .tourLocation:hover {
+  color: var(--PrimaryColor);
+  transition: 0.3s;
+}
+.tour .tourSecContent .tourCard .tourCardInfo .tourText {
+  font-size: 1rem;
+  color: rgb(182, 136, 22);
+  padding: 0 20px 0 20px;
+}
+
+@media screen and (max-width: 959px) {
+  .tour {
+    width: 100%;
+  }
+  .tour .tourSecContent .tourCard {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .tour {
+    width: 100%;
+  }
+  .tour .tourSecContent .tourCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    padding: 1.2rem 0 1.2rem 0;
+  }
+  .tour .tourSecContent .tourCard .tourCardInfo {
+    padding: 0;
+  }
+  .tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle .tourPlace, .tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle .tourDate {
+    display: flex;
+    font-size: 1.5rem;
+    padding: 0;
+    justify-items: center;
+  }
+  .tour .tourSecContent .tourCard .tourCardInfo .tourLocation, .tour .tourSecContent .tourCard .tourCardInfo .tourText {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+}
+.media {
+  width: 90%;
+  background: var(--backgroundColor2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.media .mediaTitle {
+  font-size: 2rem;
+  color: var(--PrimaryColor);
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.media .ytVideo {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.media .ytVideo iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+@media screen and (max-width: 959px) {
+  .video {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .video {
+    width: 100%;
+  }
+  .video .ytVideo {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+  .video .ytVideo iframe {
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    width: 95%;
+    height: 95%;
+  }
+}
+.datenschutzMain {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  background-color: var(--backgroundColor2);
+}
+.datenschutzMain .datenschutzTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--PrimaryColor);
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.datenschutzMain .datenschutz {
+  width: 80%;
+  font-size: 1.25rem;
+  color: var(--textColor);
+  line-height: 1.5;
+  padding-bottom: 10vh;
+  margin: auto;
+}
+.datenschutzMain .impressum {
+  width: 70%;
+  font-size: 1.25rem;
+  color: var(--textColor);
+  line-height: 1.5;
+  padding-bottom: 10vh;
+  margin: auto;
+}
+.datenschutzMain .tabbed {
+  font-size: 1.25rem;
+  color: var(--textColor);
+  padding-left: 2%;
+  line-height: 1.5;
+  margin: auto;
+}
+
+@media screen and (max-width: 550px) {
+  .datenschutzMain {
+    width: 100%;
+  }
+}/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,188 @@
+@import "../../../app.css";
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--backgroundColor1);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+    backdrop-filter: blur(10px);
+
+    .logo {
+        color: var(--PrimaryColor);
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            color: var(--SecondaryColor);
+            transform: translateY(7px);
+            margin-right: 1rem;
+            margin-left: 0.5rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            transform: translateY(1px);
+            margin-left: 1rem;
+        }  
+    }
+
+    @media screen and (max-width: 768px) {
+        .navBar {
+            position: absolute;
+            background: var(--backgroundColor1);
+            height: max-content;
+            width: 80%;
+            border-radius: 1rem;
+            top: -25rem;
+            left: 50%;
+            padding: 1rem;
+            transform: translate(-50%);
+            z-index: 2000;
+            box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+            transition: 0.2s ease-in-out;
+
+            .navList {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+                padding: 0.5rem 0;
+    
+                .navItem {
+                    padding: 0.5rem 0;
+    
+                    .navLink {
+                        color: var(--textColor);
+                        font-weight: 500;
+                        transition: 0.5s ease;
+                        
+                        &:hover {
+                            color: var(--PrimaryColor);
+                            transition: 0.5s ease;
+                        }
+                    }
+                }
+    
+                .btn {
+                    margin-top: 1rem;  
+                    
+                    p {
+                        color: var(--whiteColor);
+                    }
+
+                    &:hover {
+                        background: var(--gradientColor);
+
+                        p {
+                            color: var(--SecondaryColor);
+                        }
+                    }
+                }
+            }
+    
+            .closeNavBar {
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+                color: var(--PrimaryColor);
+            
+                &:hover {
+                    color: var(--SecondaryColor);
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        .activeNavBar {
+            top: 7rem;
+            background: rgba(0, 0, 0, 0.95);
+            width: 90vw;
+        }
+    }
+
+    .toggleNavBar {
+        .icon {
+            font-size: 30px;
+            color: var(--PrimaryColor);
+            transform: translateY(7px);
+        }
+        &:hover .icon {
+            color: var(--SecondaryColor);
+            transition: 0.5s;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .toggleNavBar, .closeNavBar {
+        display: none;
+    }
+
+    .header {
+        padding: 1.5rem 2rem; 
+
+        .navBar {
+            .navList {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .navItem {
+                    .navLink {
+                        color: var(--textColor);
+                        padding: 0.2rem 0.7rem;
+                        margin-right: 0.5rem;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        transition: 0.75s ease;
+                        border-radius: 0.75rem;
+
+                        &:hover {
+                            background-color: var(--PrimaryColorBG);
+                            border-radius: 0.75rem;
+                            transition: 0.75s ease;
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-left: 1rem;
+                    
+                    p {
+                        color: var(--whiteColor);
+                    }
+
+                    &:hover {
+                        background: var(--gradientColor);
+
+                        p {
+                            color: var(--SecondaryColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .header {
+        .navBar {
+            .navList {
+                padding: 0 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header {
+        padding: 1rem, 8rem;
+    }
+}

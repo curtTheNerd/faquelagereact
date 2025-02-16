@@ -1,0 +1,963 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cutive+Mono&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=GFS+Didot&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sawarabi+Gothic&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'GFS Didot';
+}
+
+:root {
+    --PrimaryColor: rgb(203, 161, 55);
+    --SecondaryColor: rgb(152, 113, 14);
+    --textColor: rgb(218, 195, 142);
+    --iconColor: antiquewhite;
+    --gradientColor: linear-gradient(to right, yellow, rgb(255, 195, 42));
+    --backgroundColor1: rgba(0, 0, 0, 0.4);
+    --backgroundColor2: rgba(0, 0, 0, 0.2);
+    --whiteColor: white;
+    --blackColor: black;
+    --PrimaryColorBG: rgba(218, 165, 32, 0.5);
+    --textColorNegative: rgb(64, 59, 53);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    font-style: 'Italianno', 'Helvetica', serif;
+    color: var(--textColor);
+    background: linear-gradient(to right, var(--SecondaryColor), var(--PrimaryColor));
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: rgb(19, 17, 13);
+}
+
+
+
+
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 1;       
+    }
+    
+    img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .homeContent {
+        width: 100%;
+        height: max-content;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: var(--whiteColor);
+        z-index: 100;
+
+        .textDiv {
+            padding: 2rem 0;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                font-size: 3rem;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+
+                .h1_1 {
+                    font-family: 'Garamond', 'Helvetica, serif;';
+                    color: var(--PrimaryColor);
+                    text-shadow: 1px 1px 4px rgb(162, 120, 14);
+                    
+                }
+                .h1_2 {
+                    font-family: "Cedarville Cursive", 'Helvetica', serif;
+                    color: var(--PrimaryColor);
+                    text-shadow: 1px 1px 2px rgb(162, 120, 14);
+                }
+            }
+
+            .subtitle {
+                position: relative;
+                font-size: 1.5rem;
+                color: var(--PrimaryColor);
+                font-family: 'Garamond', Helvetica, serif;
+                font-weight: 500;
+                font-style: italic;              
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        height: 50vh;
+        
+        img {
+            margin-top: 3rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 21vh;
+
+                .title {
+                    font-size: 3rem;
+                }
+
+                .subtitle {
+                    padding-left: 40%; 
+                }
+            }
+        }
+    }    
+}
+@media screen and (min-width: 769px) {
+    .home {
+        height: 70vh;
+        
+        img {
+            margin-top: 4rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 37vh;
+
+                .title {
+                    font-size: 4rem;
+                }
+    
+                .subtitle {
+                    font-size: 2rem;
+                    padding-left: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .home {
+        height: 85vh;
+        
+        img {
+            margin-top: 4rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 50vh;
+
+                .title {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .home {
+        height: 100vh;
+        
+        img {
+            margin-top: 4rem;
+        }
+    
+        .homeContent {
+            .textDiv {
+                padding-top: 60vh;
+
+                .title {
+                    font-size: 5rem;
+                    padding-bottom: 0;
+                }
+    
+                .subtitle {
+                    font-size: 2.5rem;
+                    padding-left: 50%;
+                }
+            }
+        }
+    }    
+}
+
+/*
+.slideShowContainer {
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.slideShowImage {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    transition: left 0.5s;
+    left: 0;
+}
+*/
+
+
+
+
+
+.news {
+    width: 90%;
+    background: var(--backgroundColor2);
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+
+    .newsTitle {
+        font-size: 2rem;
+        color: var(--PrimaryColor);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 2.5rem;
+    }
+
+    .newsSecContent {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .newsCard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-height: auto;
+            overflow: hidden; 
+            border: 1px solid rgb(24, 20, 12);
+            border-radius: 4px;
+            background: var(--backgroundColor);
+            margin: 15px auto;
+
+            &:hover{
+                transition: 1s;
+                box-shadow: 0 0 15px 15px rgb(19, 19, 19);
+            }
+
+            img {
+                width: 350px;
+                height: 350px;
+                margin: auto;
+            }
+
+            .newsCardInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                line-height: 1.5;
+                margin: auto;
+
+                .newsCardTitle {
+                    font-size: 1.9rem;
+                    color: var(--PrimaryColor);
+                    padding-bottom: 1rem;
+                }
+    
+                .newsLinkName {
+                    font-size: 1.6rem;
+                    color: var(--PrimaryColor);
+                    transition: 0.3s;
+    
+                    &:hover {
+                        color: var(--textColor);
+                        transition: 0.3s;
+                    }
+                }
+    
+                .newsCardSubtitle, .newsText, .newsLink {
+                    font-size: 1.4rem;
+                    color: var(--SecondaryColor);
+                    padding: 0 20px 0 20px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .news {
+        width: 100%;
+
+        .newsSecContent {
+            .newsCard {
+                display: flex;
+                flex-direction: column;
+                max-height: auto;
+                width: 100%;
+                
+                img {
+                    margin: 1rem auto 2rem auto;
+                    padding: 0.2rem;
+                }
+
+                .newsCardInfo {
+                    margin: 0 auto 2rem auto;
+
+                    .newsCardTitle {
+                        font-size: 1.75rem;
+                    }
+
+                    .newsLinkName {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .news {
+        width: 100%;
+
+        .newsSecContent {
+            .newsCard {
+                .newsCardInfo {
+                    margin: 0 auto 2rem auto;
+
+                    .newsCardTitle {
+                        font-size: 1.35rem;
+                    }
+
+                    .newsLinkName {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.about {
+    width: 90%;
+    background: var(--backgroundColor2);
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+
+    .aboutTitle {
+        font-size: 2rem;
+        color: var(--PrimaryColor);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 2.5rem;
+    }
+
+    .presseText1 {
+        font-size: 1.25rem;
+        color: var(--textColor);
+        text-align: center;
+        line-height: 1.75;
+        max-width: 80%;
+        margin: 0 auto;
+        padding-bottom: 45px;
+    }
+
+    .presseText2 {
+        font-size: 1.25rem;
+        color: var(--textColor);
+        text-align: center;
+        line-height: 1.75;
+        max-width: 80%;
+        margin: 0 auto;
+        padding-bottom: 45px;
+    }
+
+    .aboutSecContent {
+        justify-content: center;
+        gap: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+        .aboutCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            min-width: 350px;
+            max-height: auto;
+            overflow: hidden; 
+            border: 1px solid rgb(24, 20, 12);
+            border-radius: 4px;
+            background: var(--backgroundColor1);
+            padding-bottom: 25px;
+            margin: 15px auto;
+            transition: 0.5s;
+
+            &:hover{
+                transition: 1s;
+                transform: scale(1.05);
+                box-shadow: 0 0 5px 5px var(--SecondaryColor);
+                background-color: rgba(0, 0, 0, 0.2);
+                border: none;
+            }
+
+            img {
+                width: 350px;
+                height: 350px;
+                padding-bottom: 1vh;
+            }
+
+            .aboutCardInfo {
+                padding: 20px;
+                line-height: 1.5;
+            }
+
+            .aboutName {
+                font-size: 1.75rem;
+                color: var(--PrimaryColor);
+                padding-bottom: 15px;
+                text-align: center;
+            }
+
+            .aboutLinkName {
+                font-size: 1.25rem;
+                color: var(--PrimaryColor);
+                padding-left: 5px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: rgb(255, 230, 167);
+                    transition: 0.3s;
+                }
+            }
+
+            .aboutInstrument, .aboutSkill, .aboutLink {
+                font-size: 1.1rem;
+                color: rgb(182, 136, 22);
+                padding: 0 20px 0 20px;
+            }
+        }
+    }
+
+    .modal {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 2000;
+
+        .modalCard {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 100px;
+
+            img {
+                max-width: 500px;
+                max-height: 500px;
+                object-position: center;
+                object-fit: cover;
+            }
+
+            .aboutCardInfo {
+                padding: 20px;
+                padding-left: 50px;
+                line-height: 1.5;
+            }
+
+            .aboutName {
+                font-size: 1.75rem;
+                color: var(--PrimaryColor);
+                padding-bottom: 15px;
+                text-align: center;
+            }
+
+            .aboutLinkName {
+                font-size: 1.1rem;
+                color: var(--PrimaryColor);
+                padding-left: 5px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: rgb(255, 230, 167);
+                    transition: 0.3s;
+                }
+            }
+
+            .aboutInstrument, .aboutSkill, .aboutLink, .modalTextAdd {
+                font-size: 1.1rem;
+                color: var(--PrimaryColor);
+                padding: 0 20px 0 20px;
+            }
+
+            .aboutLink, .modalTextAdd {
+                padding-top: 15px;
+            }
+        }
+        
+        .modalClose {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: rgb(100, 100, 100);
+            font-size: 40px;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        
+        .modalPrev, .modalNext {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: rgb(100, 100, 100);
+            font-weight: bold;
+            font-size: 30px;
+            cursor: pointer;
+            transition: 0.5s;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        .modalPrev {
+            left: 0;
+        }
+        
+        .modalNext {
+            right: 0;
+            padding-right: 35px;
+        }
+        
+        .modalClose:hover, .modalPrev:hover, .modalNext:hover {
+            color: antiquewhite;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .about {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        .modal {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+    
+            .modalCard {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 40px;
+    
+                img {
+                    object-position: center;
+                    object-fit: cover;
+                    margin: auto;
+                    padding: 1px;
+                }
+    
+                .aboutCardInfo {
+                    padding-left: 50px;
+                    line-height: 1.5;
+                }
+    
+                .aboutName {
+                    font-size: 1.75rem;
+                    color: var(--PrimaryColor);
+                    padding-bottom: 15px;
+                    text-align: center;
+                }
+    
+                .aboutLinkName {
+                    font-size: 1.1rem;
+                    color: var(--PrimaryColor);
+                    padding-left: 5px;
+                    transition: 0.3s;
+                }
+    
+                .aboutInstrument, .aboutSkill, .aboutLink, .modalTextAdd {
+                    font-size: 1rem;
+                    color: rgb(182, 136, 22);
+                    padding: 0 20px 0 20px;
+                }
+    
+                .aboutLink, .modalTextAdd {
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about {
+        .aboutSecContent {
+            justify-content: center;
+
+            .aboutCard {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                margin: 0 auto;
+
+                img {
+                    max-width: 350px;
+                    max-height: 350px;
+                    padding-bottom: 1rem;
+                }
+
+                .aboutCardInfo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+
+                    .aboutName, .aboutInstrument, .aboutSkill, .aboutLink {
+                        display: flex;
+                        justify-items: center;
+                        font-weight: 600;
+                        padding: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.tour {
+    width: 90%;
+    background: var(--backgroundColor2);
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+
+    .tourTitle {
+        font-size: 2rem;
+        color: var(--PrimaryColor);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 2.5rem;
+    }
+
+    .tourSecContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 2rem;
+
+        .tourCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            max-height: auto;
+            overflow: hidden; 
+            border: 1px solid rgb(24, 20, 12);
+            border-radius: 4px;
+            background: var(--backgroundColor);
+            margin: 0.5rem auto;
+            transition: 0.5s;
+
+            &:hover{
+                transition: 1s;
+                transform: scale(1.025);
+                box-shadow: 0 0 2px 2px rgb(19, 19, 19);
+                border: none;
+            }
+            
+            .tourCardInfo {
+                padding: 20px;
+                line-height: 1.5;
+
+                .tourCardTitle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    .tourPlace {
+                        font-size: 1.8rem;
+                        color: var(--textColor);
+                        padding-bottom: 15px;
+                        padding-right: 50px;
+                        text-align: center;
+                    }
+        
+                    .tourDate {
+                        font-size: 1.8rem;
+                        color: var(--textColor);
+                        padding-bottom: 15px;
+                        right: 5rem;
+                    }
+                }
+
+                .tourLocation {
+                    font-size: 1.6rem;
+                    color: var(--textColor);
+                    transition: 0.3s;
+                    text-align: center;
+                    padding: 0;
+    
+                    &:hover {
+                        color: var(--PrimaryColor);
+                        transition: 0.3s;
+                    }
+                }
+    
+                .tourText {
+                    font-size: 1rem;
+                    color: rgb(182, 136, 22);
+                    padding: 0 20px 0 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .tour {
+        width: 100%;
+
+        .tourSecContent {
+            .tourCard {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .tour {
+        width: 100%;
+
+        .tourSecContent {
+            .tourCard {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 95%;
+                padding: 1.2rem 0 1.2rem 0;
+
+                .tourCardInfo {
+                    padding: 0;
+                
+                    .tourCardTitle {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .tourPlace, .tourDate {
+                            display: flex;
+                            font-size: 1.5rem;
+                            padding: 0;
+                            justify-items: center;
+                        }
+                    }
+
+                    .tourLocation, .tourText {
+                        font-size: 1.35rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.media {
+    width: 90%;
+    background: var(--backgroundColor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+
+    .mediaTitle {
+        font-size: 2rem;
+        color: var(--PrimaryColor);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 2.5rem;
+        
+    }
+
+    .ytVideo {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+
+    .ytVideo iframe {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .video {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .video {
+        width: 100%;
+
+        .ytVideo {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+    
+        .ytVideo iframe {
+            position: absolute;
+            top: 2.5%;
+            left: 2.5%;
+            width: 95%;
+            height: 95%;
+        }
+    }
+}
+
+
+.datenschutzMain {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    background-color: var(--backgroundColor2);
+
+    .datenschutzTitle {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--PrimaryColor);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 2.5rem;
+    }
+
+    .datenschutz {
+        width: 80%;
+        font-size: 1.25rem;
+        color: var(--textColor);
+        line-height: 1.5;
+        padding-bottom: 10vh;
+        margin: auto;
+    }
+
+    .impressum {
+        width: 70%;
+        font-size: 1.25rem;
+        color: var(--textColor);
+        line-height: 1.5;
+        padding-bottom: 10vh;
+        margin: auto;
+    }
+
+    .tabbed {
+        font-size: 1.25rem;
+        color: var(--textColor);
+        padding-left: 2%;
+        line-height: 1.5;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .datenschutzMain {
+        width: 100%;
+    }
+}
