@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cutive+Mono&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=GFS+Didot&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sawarabi+Gothic&display=swap');
 
+// roots
+
 * {
     padding: 0;
     margin: 0;
@@ -29,10 +31,6 @@ li {
     list-style: none;
 }
 
-.section {
-    padding: 4rem 0 2rem;
-}
-
 .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -59,181 +57,48 @@ li {
     cursor: pointer;
 }
 
-body {
-    background-color: rgb(19, 17, 13);
-}
-
-
-
+// Home
 
 .home {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    background: var(--backgroundColor2);
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
 
-    .overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        z-index: 1;       
+    .homeTitle {
+        font-size: 4rem;
+        color: var(--PrimaryColor);
+        text-shadow: 1px 1px 2px rgb(162, 120, 14);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 2.5rem;
+
+        .h1_2 {
+            font-family: "Cedarville Cursive", 'Helvetica', serif;
+        }
     }
-    
-    img {
+            
+    .subtitle {
         position: relative;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        object-fit: cover;
-        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.7);
-    }
+        font-size: 2rem;
+        text-align: center;
+        color: var(--PrimaryColor);
+        font-style: italic;
+        padding-bottom: 2.5rem;
+    }   
 
-    .homeContent {
-        width: 100%;
-        height: max-content;
-        padding: 8rem 1.5rem 3rem;
-        display: flex;
-        row-gap: 3rem;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
-        margin: auto;
-        color: var(--whiteColor);
-        z-index: 100;
-
-        .textDiv {
-            padding: 2rem 0;
+    .homeBanner {
+        img {
             position: relative;
-            justify-content: center;
-            align-items: center;
-
-            .title {
-                font-size: 3rem;
-                position: relative;
-                justify-content: center;
-                align-items: center;
-
-                .h1_1 {
-                    font-family: 'Garamond', 'Helvetica, serif;';
-                    color: var(--PrimaryColor);
-                    text-shadow: 1px 1px 4px rgb(162, 120, 14);
-                    
-                }
-                .h1_2 {
-                    font-family: "Cedarville Cursive", 'Helvetica', serif;
-                    color: var(--PrimaryColor);
-                    text-shadow: 1px 1px 2px rgb(162, 120, 14);
-                }
-            }
-
-            .subtitle {
-                position: relative;
-                font-size: 1.5rem;
-                color: var(--PrimaryColor);
-                font-family: 'Garamond', Helvetica, serif;
-                font-weight: 500;
-                font-style: italic;              
-            }
+            height: 100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .home {
-        height: 50vh;
-        
-        img {
-            margin-top: 3rem;
-        }
-    
-        .homeContent {
-            .textDiv {
-                padding-top: 21vh;
-
-                .title {
-                    font-size: 3rem;
-                }
-
-                .subtitle {
-                    padding-left: 40%; 
-                }
-            }
-        }
-    }    
-}
-@media screen and (min-width: 769px) {
-    .home {
-        height: 70vh;
-        
-        img {
-            margin-top: 4rem;
-        }
-    
-        .homeContent {
-            .textDiv {
-                padding-top: 37vh;
-
-                .title {
-                    font-size: 4rem;
-                }
-    
-                .subtitle {
-                    font-size: 2rem;
-                    padding-left: 40%;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 960px) {
-    .home {
-        height: 85vh;
-        
-        img {
-            margin-top: 4rem;
-        }
-    
-        .homeContent {
-            .textDiv {
-                padding-top: 50vh;
-
-                .title {
-                    font-size: 4.5rem;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1240px) {
-    .home {
-        height: 100vh;
-        
-        img {
-            margin-top: 4rem;
-        }
-    
-        .homeContent {
-            .textDiv {
-                padding-top: 60vh;
-
-                .title {
-                    font-size: 5rem;
-                    padding-bottom: 0;
-                }
-    
-                .subtitle {
-                    font-size: 2.5rem;
-                    padding-left: 50%;
-                }
-            }
-        }
-    }    
+    }   
 }
 
 /*
@@ -253,9 +118,6 @@ body {
     left: 0;
 }
 */
-
-
-
 
 
 .news {
@@ -392,21 +254,21 @@ body {
     }
 }
 
-
+// About
 
 .about {
     width: 90%;
     background: var(--backgroundColor2);
     margin: 0 auto;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
 
     .aboutTitle {
         font-size: 2rem;
         color: var(--PrimaryColor);
         text-align: center;
         margin: 0 auto;
-        padding-bottom: 2.5rem;
+        padding-bottom: 4rem;
     }
 
     .presseText1 {
@@ -435,20 +297,19 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: 50px;
+        padding-bottom: 3rem;
 
         .aboutCard {
             display: flex;
             flex-direction: column;
             justify-content: left;
-            min-width: 350px;
-            max-height: auto;
-            overflow: hidden; 
+            max-width: 375px;
+            max-height: auto; 
             border: 1px solid rgb(24, 20, 12);
-            border-radius: 4px;
+            border-radius: 5px;
             background: var(--backgroundColor1);
             padding-bottom: 25px;
-            margin: 15px auto;
+            margin: 0.5rem auto;
             transition: 0.5s;
 
             &:hover{
@@ -460,28 +321,30 @@ body {
             }
 
             img {
-                width: 350px;
-                height: 350px;
-                padding-bottom: 1vh;
+                max-width: 375px;
+                max-width: 375px;
+                object-fit: cover;
+                padding-bottom: 0.25rem;
             }
 
             .aboutCardInfo {
-                padding: 20px;
+                padding: 1.5rem;
                 line-height: 1.5;
             }
 
             .aboutName {
-                font-size: 1.75rem;
+                font-size: 1.6rem;
                 color: var(--PrimaryColor);
-                padding-bottom: 15px;
+                padding-bottom: 1.5rem;
                 text-align: center;
             }
 
             .aboutLinkName {
                 font-size: 1.25rem;
                 color: var(--PrimaryColor);
-                padding-left: 5px;
+                text-align: center;
                 transition: 0.3s;
+                padding-top: 1rem;
 
                 &:hover {
                     color: rgb(255, 230, 167);
@@ -490,7 +353,7 @@ body {
             }
 
             .aboutInstrument, .aboutSkill, .aboutLink {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
                 color: rgb(182, 136, 22);
                 padding: 0 20px 0 20px;
             }
@@ -601,14 +464,10 @@ body {
     }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 800px) {
     .about {
         width: 100%;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .about {
         .modal {
             width: 100vw;
             height: 100vh;
@@ -632,112 +491,57 @@ body {
                     margin: auto;
                     padding: 1px;
                 }
-    
-                .aboutCardInfo {
-                    padding-left: 50px;
-                    line-height: 1.5;
-                }
-    
-                .aboutName {
-                    font-size: 1.75rem;
-                    color: var(--PrimaryColor);
-                    padding-bottom: 15px;
-                    text-align: center;
-                }
-    
-                .aboutLinkName {
-                    font-size: 1.1rem;
-                    color: var(--PrimaryColor);
-                    padding-left: 5px;
-                    transition: 0.3s;
-                }
-    
-                .aboutInstrument, .aboutSkill, .aboutLink, .modalTextAdd {
-                    font-size: 1rem;
-                    color: rgb(182, 136, 22);
-                    padding: 0 20px 0 20px;
-                }
-    
-                .aboutLink, .modalTextAdd {
-                    padding-top: 15px;
-                }
             }
         }
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .about {
         .aboutSecContent {
             justify-content: center;
 
             .aboutCard {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 90%;
+                max-width: 350px;
                 margin: 0 auto;
 
                 img {
                     max-width: 350px;
                     max-height: 350px;
-                    padding-bottom: 1rem;
-                }
-
-                .aboutCardInfo {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 0;
-
-                    .aboutName, .aboutInstrument, .aboutSkill, .aboutLink {
-                        display: flex;
-                        justify-items: center;
-                        font-weight: 600;
-                        padding: 0.2rem;
-                    }
                 }
             }
         }
     }
 }
 
+// Tour
 
 .tour {
     width: 90%;
     background: var(--backgroundColor2);
     margin: 0 auto;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
 
     .tourTitle {
         font-size: 2rem;
         color: var(--PrimaryColor);
         text-align: center;
         margin: 0 auto;
-        padding-bottom: 2.5rem;
+        padding-bottom: 4rem;
     }
 
     .tourSecContent {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         padding-bottom: 2rem;
 
         .tourCard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 75%;
+            width: 90%;
             max-height: auto;
-            overflow: hidden; 
-            border: 1px solid rgb(24, 20, 12);
             border-radius: 4px;
-            background: var(--backgroundColor);
-            margin: 0.5rem auto;
+            background: var(--backgroundColor2);
+            margin: 0.25rem auto;
             transition: 0.5s;
 
             &:hover{
@@ -748,36 +552,30 @@ body {
             }
             
             .tourCardInfo {
-                padding: 20px;
+                padding: 1.25rem 5rem 1.25rem 20vw;
                 line-height: 1.5;
 
                 .tourCardTitle {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
     
                     .tourPlace {
-                        font-size: 1.8rem;
+                        font-size: 1.5rem;
                         color: var(--textColor);
-                        padding-bottom: 15px;
-                        padding-right: 50px;
-                        text-align: center;
+                        padding-bottom: 0.75rem;
+                        padding-right: 6rem;
                     }
         
                     .tourDate {
-                        font-size: 1.8rem;
+                        font-size: 1.5rem;
                         color: var(--textColor);
-                        padding-bottom: 15px;
-                        right: 5rem;
+                        padding-bottom: 0.75rem;
                     }
                 }
 
                 .tourLocation {
-                    font-size: 1.6rem;
+                    font-size: 1.5rem;
                     color: var(--textColor);
                     transition: 0.3s;
-                    text-align: center;
-                    padding: 0;
     
                     &:hover {
                         color: var(--PrimaryColor);
@@ -795,19 +593,7 @@ body {
     }
 }
 
-@media screen and (max-width: 959px) {
-    .tour {
-        width: 100%;
-
-        .tourSecContent {
-            .tourCard {
-                width: 80%;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     .tour {
         width: 100%;
 
@@ -818,7 +604,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 width: 95%;
-                padding: 1.2rem 0 1.2rem 0;
+                padding: 1rem 0 1rem 0;
 
                 .tourCardInfo {
                     padding: 0;
@@ -847,6 +633,7 @@ body {
     }
 }
 
+// Media
 
 .media {
     width: 90%;
@@ -856,15 +643,15 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
 
     .mediaTitle {
         font-size: 2rem;
         color: var(--PrimaryColor);
         text-align: center;
         margin: 0 auto;
-        padding-bottom: 2.5rem;
+        padding-bottom: 4rem;
         
     }
 
@@ -915,8 +702,8 @@ body {
 .datenschutzMain {
     width: 90%;
     margin: 0 auto;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
     background-color: var(--backgroundColor2);
 
     .datenschutzTitle {
@@ -926,12 +713,12 @@ body {
         color: var(--PrimaryColor);
         text-align: center;
         margin: 0 auto;
-        padding-bottom: 2.5rem;
+        padding-bottom: 4rem;
     }
 
     .datenschutz {
         width: 80%;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         color: var(--textColor);
         line-height: 1.5;
         padding-bottom: 10vh;
@@ -940,7 +727,7 @@ body {
 
     .impressum {
         width: 70%;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         color: var(--textColor);
         line-height: 1.5;
         padding-bottom: 10vh;
@@ -948,7 +735,7 @@ body {
     }
 
     .tabbed {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         color: var(--textColor);
         padding-left: 2%;
         line-height: 1.5;
@@ -956,7 +743,7 @@ body {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     .datenschutzMain {
         width: 100%;
     }

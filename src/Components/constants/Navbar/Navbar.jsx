@@ -40,9 +40,8 @@ const Navbar = () => {
                 <div className={active}>
                     <ul className="navList flex">
                         <li className="navItem"><Link to="/" className='navLink' onClick={handleClick}>Home</Link></li>
-                        <li className="navItem"><Link to="/news" className='navLink' onClick={handleClick}>News</Link></li>
-                        <li className="navItem"><Link to="/about" className='navLink' onClick={handleClick}>About</Link></li>
                         <li className="navItem"><Link to="/tour" className='navLink' onClick={handleClick}>Tour</Link></li>
+                        <li className="navItem"><Link to="/about" className='navLink' onClick={handleClick}>About</Link></li>
                         <li className="navItem"><Link to="/media" className='navLink' onClick={handleClick}>Media</Link></li>
                     </ul>
 

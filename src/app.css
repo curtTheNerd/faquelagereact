@@ -28,10 +28,6 @@ li {
   list-style: none;
 }
 
-.section {
-  padding: 4rem 0 2rem;
-}
-
 .container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -58,26 +54,34 @@ li {
   cursor: pointer;
 }
 
-body {
-  background-color: rgb(19, 17, 13);
-}
-
 .home {
-  width: 100%;
+  flex-wrap: wrap;
+  width: 90%;
+  background: var(--backgroundColor2);
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.home .homeTitle {
+  font-size: 4rem;
+  color: var(--PrimaryColor);
+  text-shadow: 1px 1px 2px rgb(162, 120, 14);
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.home .homeTitle .h1_2 {
+  font-family: "Cedarville Cursive", "Helvetica", serif;
+}
+.home .subtitle {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--PrimaryColor);
+  font-style: italic;
+  padding-bottom: 2.5rem;
 }
-.home .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
-.home img {
+.home .homeBanner img {
   position: relative;
   height: 100%;
   width: 100%;
@@ -85,121 +89,8 @@ body {
   bottom: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.7);
-}
-.home .homeContent {
-  width: 100%;
-  height: -moz-max-content;
-  height: max-content;
-  padding: 8rem 1.5rem 3rem;
-  display: flex;
-  row-gap: 3rem;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  margin: auto;
-  color: var(--whiteColor);
-  z-index: 100;
-}
-.home .homeContent .textDiv {
-  padding: 2rem 0;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-.home .homeContent .textDiv .title {
-  font-size: 3rem;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-.home .homeContent .textDiv .title .h1_1 {
-  font-family: "Garamond", "Helvetica, serif;";
-  color: var(--PrimaryColor);
-  text-shadow: 1px 1px 4px rgb(162, 120, 14);
-}
-.home .homeContent .textDiv .title .h1_2 {
-  font-family: "Cedarville Cursive", "Helvetica", serif;
-  color: var(--PrimaryColor);
-  text-shadow: 1px 1px 2px rgb(162, 120, 14);
-}
-.home .homeContent .textDiv .subtitle {
-  position: relative;
-  font-size: 1.5rem;
-  color: var(--PrimaryColor);
-  font-family: "Garamond", Helvetica, serif;
-  font-weight: 500;
-  font-style: italic;
 }
 
-@media screen and (max-width: 768px) {
-  .home {
-    height: 50vh;
-  }
-  .home img {
-    margin-top: 3rem;
-  }
-  .home .homeContent .textDiv {
-    padding-top: 21vh;
-  }
-  .home .homeContent .textDiv .title {
-    font-size: 3rem;
-  }
-  .home .homeContent .textDiv .subtitle {
-    padding-left: 40%;
-  }
-}
-@media screen and (min-width: 769px) {
-  .home {
-    height: 70vh;
-  }
-  .home img {
-    margin-top: 4rem;
-  }
-  .home .homeContent .textDiv {
-    padding-top: 37vh;
-  }
-  .home .homeContent .textDiv .title {
-    font-size: 4rem;
-  }
-  .home .homeContent .textDiv .subtitle {
-    font-size: 2rem;
-    padding-left: 40%;
-  }
-}
-@media screen and (min-width: 960px) {
-  .home {
-    height: 85vh;
-  }
-  .home img {
-    margin-top: 4rem;
-  }
-  .home .homeContent .textDiv {
-    padding-top: 50vh;
-  }
-  .home .homeContent .textDiv .title {
-    font-size: 4.5rem;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .home {
-    height: 100vh;
-  }
-  .home img {
-    margin-top: 4rem;
-  }
-  .home .homeContent .textDiv {
-    padding-top: 60vh;
-  }
-  .home .homeContent .textDiv .title {
-    font-size: 5rem;
-    padding-bottom: 0;
-  }
-  .home .homeContent .textDiv .subtitle {
-    font-size: 2.5rem;
-    padding-left: 50%;
-  }
-}
 /*
 .slideShowContainer {
     overflow: hidden;
@@ -329,15 +220,15 @@ body {
   width: 90%;
   background: var(--backgroundColor2);
   margin: 0 auto;
-  padding-top: 10rem;
-  padding-bottom: 3rem;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
 }
 .about .aboutTitle {
   font-size: 2rem;
   color: var(--PrimaryColor);
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 4rem;
 }
 .about .presseText1 {
   font-size: 1.25rem;
@@ -363,20 +254,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 3rem;
 }
 .about .aboutSecContent .aboutCard {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  min-width: 350px;
+  max-width: 375px;
   max-height: auto;
-  overflow: hidden;
   border: 1px solid rgb(24, 20, 12);
-  border-radius: 4px;
+  border-radius: 5px;
   background: var(--backgroundColor1);
   padding-bottom: 25px;
-  margin: 15px auto;
+  margin: 0.5rem auto;
   transition: 0.5s;
 }
 .about .aboutSecContent .aboutCard:hover {
@@ -387,32 +277,35 @@ body {
   border: none;
 }
 .about .aboutSecContent .aboutCard img {
-  width: 350px;
-  height: 350px;
-  padding-bottom: 1vh;
+  max-width: 375px;
+  max-width: 375px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-bottom: 0.25rem;
 }
 .about .aboutSecContent .aboutCard .aboutCardInfo {
-  padding: 20px;
+  padding: 1.5rem;
   line-height: 1.5;
 }
 .about .aboutSecContent .aboutCard .aboutName {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   color: var(--PrimaryColor);
-  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
   text-align: center;
 }
 .about .aboutSecContent .aboutCard .aboutLinkName {
   font-size: 1.25rem;
   color: var(--PrimaryColor);
-  padding-left: 5px;
+  text-align: center;
   transition: 0.3s;
+  padding-top: 1rem;
 }
 .about .aboutSecContent .aboutCard .aboutLinkName:hover {
   color: rgb(255, 230, 167);
   transition: 0.3s;
 }
 .about .aboutSecContent .aboutCard .aboutInstrument, .about .aboutSecContent .aboutCard .aboutSkill, .about .aboutSecContent .aboutCard .aboutLink {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: rgb(182, 136, 22);
   padding: 0 20px 0 20px;
 }
@@ -509,12 +402,10 @@ body {
   transition: 0.5s;
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 800px) {
   .about {
     width: 100%;
   }
-}
-@media screen and (max-width: 768px) {
   .about .modal {
     width: 100vw;
     height: 100vh;
@@ -540,94 +431,45 @@ body {
     margin: auto;
     padding: 1px;
   }
-  .about .modal .modalCard .aboutCardInfo {
-    padding-left: 50px;
-    line-height: 1.5;
-  }
-  .about .modal .modalCard .aboutName {
-    font-size: 1.75rem;
-    color: var(--PrimaryColor);
-    padding-bottom: 15px;
-    text-align: center;
-  }
-  .about .modal .modalCard .aboutLinkName {
-    font-size: 1.1rem;
-    color: var(--PrimaryColor);
-    padding-left: 5px;
-    transition: 0.3s;
-  }
-  .about .modal .modalCard .aboutInstrument, .about .modal .modalCard .aboutSkill, .about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
-    font-size: 1rem;
-    color: rgb(182, 136, 22);
-    padding: 0 20px 0 20px;
-  }
-  .about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
-    padding-top: 15px;
-  }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .about .aboutSecContent {
     justify-content: center;
   }
   .about .aboutSecContent .aboutCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
+    max-width: 350px;
     margin: 0 auto;
   }
   .about .aboutSecContent .aboutCard img {
     max-width: 350px;
     max-height: 350px;
-    padding-bottom: 1rem;
-  }
-  .about .aboutSecContent .aboutCard .aboutCardInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-  .about .aboutSecContent .aboutCard .aboutCardInfo .aboutName, .about .aboutSecContent .aboutCard .aboutCardInfo .aboutInstrument, .about .aboutSecContent .aboutCard .aboutCardInfo .aboutSkill, .about .aboutSecContent .aboutCard .aboutCardInfo .aboutLink {
-    display: flex;
-    justify-items: center;
-    font-weight: 600;
-    padding: 0.2rem;
   }
 }
 .tour {
   width: 90%;
   background: var(--backgroundColor2);
   margin: 0 auto;
-  padding-top: 10rem;
-  padding-bottom: 3rem;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
 }
 .tour .tourTitle {
   font-size: 2rem;
   color: var(--PrimaryColor);
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 4rem;
 }
 .tour .tourSecContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-bottom: 2rem;
 }
 .tour .tourSecContent .tourCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
+  width: 90%;
   max-height: auto;
-  overflow: hidden;
-  border: 1px solid rgb(24, 20, 12);
   border-radius: 4px;
-  background: var(--backgroundColor);
-  margin: 0.5rem auto;
+  background: var(--backgroundColor2);
+  margin: 0.25rem auto;
   transition: 0.5s;
 }
 .tour .tourSecContent .tourCard:hover {
@@ -637,33 +479,27 @@ body {
   border: none;
 }
 .tour .tourSecContent .tourCard .tourCardInfo {
-  padding: 20px;
+  padding: 1.25rem 5rem 1.25rem 20vw;
   line-height: 1.5;
 }
 .tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle .tourPlace {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--textColor);
-  padding-bottom: 15px;
-  padding-right: 50px;
-  text-align: center;
+  padding-bottom: 0.75rem;
+  padding-right: 6rem;
 }
 .tour .tourSecContent .tourCard .tourCardInfo .tourCardTitle .tourDate {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--textColor);
-  padding-bottom: 15px;
-  right: 5rem;
+  padding-bottom: 0.75rem;
 }
 .tour .tourSecContent .tourCard .tourCardInfo .tourLocation {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--textColor);
   transition: 0.3s;
-  text-align: center;
-  padding: 0;
 }
 .tour .tourSecContent .tourCard .tourCardInfo .tourLocation:hover {
   color: var(--PrimaryColor);
@@ -675,15 +511,7 @@ body {
   padding: 0 20px 0 20px;
 }
 
-@media screen and (max-width: 959px) {
-  .tour {
-    width: 100%;
-  }
-  .tour .tourSecContent .tourCard {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
   .tour {
     width: 100%;
   }
@@ -693,7 +521,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 95%;
-    padding: 1.2rem 0 1.2rem 0;
+    padding: 1rem 0 1rem 0;
   }
   .tour .tourSecContent .tourCard .tourCardInfo {
     padding: 0;
@@ -723,15 +551,15 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding-top: 10rem;
-  padding-bottom: 3rem;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
 }
 .media .mediaTitle {
   font-size: 2rem;
   color: var(--PrimaryColor);
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 4rem;
 }
 .media .ytVideo {
   position: relative;
@@ -773,8 +601,8 @@ body {
 .datenschutzMain {
   width: 90%;
   margin: 0 auto;
-  padding-top: 10rem;
-  padding-bottom: 3rem;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
   background-color: var(--backgroundColor2);
 }
 .datenschutzMain .datenschutzTitle {
@@ -784,11 +612,11 @@ body {
   color: var(--PrimaryColor);
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 4rem;
 }
 .datenschutzMain .datenschutz {
   width: 80%;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--textColor);
   line-height: 1.5;
   padding-bottom: 10vh;
@@ -796,21 +624,21 @@ body {
 }
 .datenschutzMain .impressum {
   width: 70%;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--textColor);
   line-height: 1.5;
   padding-bottom: 10vh;
   margin: auto;
 }
 .datenschutzMain .tabbed {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--textColor);
   padding-left: 2%;
   line-height: 1.5;
   margin: auto;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
   .datenschutzMain {
     width: 100%;
   }

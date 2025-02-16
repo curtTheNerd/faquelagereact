@@ -1,6 +1,3 @@
-import homeImg1 from '../../Assets/pictures/Cover Bild.jpg'
-import homeImg2 from '../../Assets/pictures/raphapuss.jpg'
-
 import newsImg1 from '../../Assets/pictures/Cover Bild.jpg'
 import newsImg2 from '../../Assets/pictures/raphapuss.jpg'
 import newsImg3 from '../../Assets/pictures/FaquelagePhoto2Square.jpg'
@@ -11,60 +8,6 @@ import aboutImg2 from '../../Assets/pictures/raphapuss.jpg'
 import aboutImg2_m from '../../Assets/pictures/Raphael.jpg'
 import aboutImg3 from '../../Assets/pictures/hase richy.jpg'
 import aboutImg3_m from '../../Assets/pictures/Richy.jpg'
-
-export const HomeData = [
-  {
-    id: 1,
-    imgSrc: homeImg1,
-    title: 'New Album Out Now!',
-    subtitle: 'Question - Faquelage',
-    text: '',
-    link: 'https://faquelage.bandcamp.com/album/questions',
-    linkName: 'CD Bestellen'
-  },
-
-  {
-    id: 2,
-    imgSrc: homeImg2,
-    title: 'Featured Video',
-    text: '',
-    description: '',
-    link: 'https://www.youtube.com/watch?v=OXdOKobg5sA&list=PLLki_nU8n8w3MZEAN4uta_8cCAejmJHkn',
-    linkName: 'Shapes in the Water - Faquelage'
-  },
-];
-
-export const NewsData = [
-  {
-    id: 3,
-    imgSrc: newsImg3,
-    title: 'Leipzig: ROOTS & SPROUTS',
-    subtitle: '14.09.2024',
-    text: '',
-    link: 'https://roots-and-sprouts.de/event/faquelage/',
-    linkName: 'Festival @ Kulturnhalle'
-  },
-
-  {
-    id: 1,
-    imgSrc: newsImg1,
-    title: 'ALBUM OUT NOW',
-    subtitle: '',
-    text: '',
-    link: 'https://faquelage.bandcamp.com/album/questions',
-    linkName: 'CD Bestellen'
-  },
-
-  {
-    id: 2,
-    imgSrc: newsImg2,
-    title: 'FEATURED VIDEO',
-    subtitle: '',
-    text: '',
-    link: 'https://www.youtube.com/watch?v=OXdOKobg5sA&list=PLLki_nU8n8w3MZEAN4uta_8cCAejmJHkn',
-    linkName: 'Shapes in the Water'
-  },
-];
 
 
 export const TourAktuell = [
@@ -80,6 +23,7 @@ export const TourAktuell = [
     }, 
 ];
   
+
 export const TourVergangenheit = [
     {
       id: 9,
@@ -193,6 +137,39 @@ export const TourVergangenheit = [
       link: '',
     },
 ];
+
+export const NewsData = [
+  {
+    id: 3, 
+    imgSrc: newsImg3,
+    title: 'Live in Concert!',
+    subtitle: 'Erfurt, 21.02.2025',
+    text: '',
+    link: 'https://www.jazzclub-erfurt.de/?b=1000077&c=ED1000281&s=djEt9gQNjql_lWVWsEcmByoZ0pOUh9_gIMuqJtfYYfUwimE=',
+    linkName: 'JazzClub Erfurt'
+  },
+
+  {
+    id: 1,
+    imgSrc: newsImg1,
+    title: 'ALBUM OUT NOW',
+    subtitle: '',
+    text: '',
+    link: 'https://faquelage.bandcamp.com/album/questions',
+    linkName: 'CD Bestellen'
+  },
+
+  {
+    id: 2,
+    imgSrc: newsImg2,
+    title: 'FEATURED VIDEO',
+    subtitle: '',
+    text: '',
+    link: 'https://www.youtube.com/watch?v=OXdOKobg5sA&list=PLLki_nU8n8w3MZEAN4uta_8cCAejmJHkn',
+    linkName: 'Shapes in the Water'
+  },
+];
+
 
 export const AboutData = [
   {

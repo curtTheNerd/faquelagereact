@@ -5,7 +5,6 @@ import Background from "./Components/constants/Background/Background";
 import Navbar from "./Components/constants/Navbar/Navbar";
 import Footer from "./Components/constants/Footer/Footer";
 import Home from "./Components/pages/Home";
-import News from "./Components/pages/News";
 import Tour from "./Components/pages/Tour";
 import About from "./Components/pages/About";
 import Media from "./Components/pages/Media";
@@ -20,7 +19,6 @@ const App = () => {
             
             <Routes>
                 <Route exact path="/" Component={Home} />
-                <Route path="/news" Component={News} />
                 <Route path="/about" Component={About} />
                 <Route path="/tour" Component={Tour} />
                 <Route path="/media" Component={Media} />

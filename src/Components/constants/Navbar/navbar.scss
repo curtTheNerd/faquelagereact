@@ -19,19 +19,19 @@
 
         .icon {
             color: var(--SecondaryColor);
-            transform: translateY(7px);
+            transform: translateY(5px);
             margin-right: 1rem;
             margin-left: 0.5rem;
         }
 
         .title {
-            font-size: 2rem;
+            font-size: 1.75rem;
             transform: translateY(1px);
             margin-left: 1rem;
         }  
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         .navBar {
             position: absolute;
             background: var(--backgroundColor1);
@@ -100,6 +100,7 @@
 
         .activeNavBar {
             top: 7rem;
+            font-size: 1.2rem;
             background: rgba(0, 0, 0, 0.95);
             width: 90vw;
         }
@@ -107,9 +108,9 @@
 
     .toggleNavBar {
         .icon {
-            font-size: 30px;
+            font-size: 2.25rem;
             color: var(--PrimaryColor);
-            transform: translateY(7px);
+            transform: translateY(5px);
         }
         &:hover .icon {
             color: var(--SecondaryColor);
@@ -118,7 +119,7 @@
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 801px) {
     .toggleNavBar, .closeNavBar {
         display: none;
     }
@@ -168,21 +169,5 @@
                 }
             }
         }
-    }
-}
-
-@media screen and (min-width: 960px) {
-    .header {
-        .navBar {
-            .navList {
-                padding: 0 1rem;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1240px) {
-    .header {
-        padding: 1rem, 8rem;
     }
 }

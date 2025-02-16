@@ -1,6 +1,6 @@
 import React from 'react';
 import { TourAktuell, TourVergangenheit } from '../constants/Data';
-
+import TourCard from '../TourCard';
 
 const Tour = () => {
   return (
@@ -8,19 +8,17 @@ const Tour = () => {
       <h2 className='tourTitle'>Aktuelle Tour</h2>
       <section className="tourSecContent">
         {
-          TourAktuell.map(({id, ort, datum, location, locationLink, optionalerText, optionalerLinkName, link}) => {
+          TourAktuell.map(data => {
             return (
-              <div key={id} className='tourCard'>
-                <div className="tourCardInfo">
-                  <div className="tourCardTitle">
-                    <h4 className="tourPlace">{ort}</h4>
-                    <h4 className="tourDate">{datum}</h4>
-                  </div>
-                  <h5><a href={locationLink} className="tourLocation" target='_blank'>{location}</a></h5>
-                  <h5 className="tourText">{optionalerText}</h5>
-                  <h5><a href={link} className="tourLocation" target='_blank'>{optionalerLinkName}</a></h5>
-                </div>
-              </div>
+              <TourCard 
+              key={data.id} 
+              ort={data.ort} 
+              datum={data.datum} 
+              location={data.location} 
+              locationLink={data.locationLink} 
+              optionalerText={data.optionalerText} 
+              optionalerLinkName={data.optionalerLinkName} 
+              link={data.link} />
             )
           })
         }
@@ -31,17 +29,15 @@ const Tour = () => {
         {
           TourVergangenheit.map(({id, ort, datum, location, locationLink, optionalerText, optionalerLinkName, link}) => {
             return (
-              <div key={id} className='tourCard'>
-                <div className="tourCardInfo">
-                  <div className="tourCardTitle">
-                    <h4 className="tourPlace">{ort}</h4>
-                    <h4 className="tourDate">{datum}</h4>
-                  </div>
-                  <h5><a href={locationLink} className="tourLocation" target='_blank'>{location}</a></h5>
-                  <h5 className="tourText">{optionalerText}</h5>
-                  <h5><a href={link} className="tourLocation" target='_blank'>{optionalerLinkName}</a></h5>
-                </div>
-              </div>
+              <TourCard 
+              key={id} 
+              ort={ort} 
+              datum={datum} 
+              location={location} 
+              locationLink={locationLink} 
+              optionalerText={optionalerText} 
+              optionalerLinkName={optionalerLinkName} 
+              link={link} />
             )
           })
         }
