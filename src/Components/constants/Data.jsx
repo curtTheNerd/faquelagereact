@@ -1,16 +1,31 @@
-import newsImg1 from '../../Assets/pictures/Cover Bild.jpg'
-import newsImg2 from '../../Assets/pictures/raphapuss.jpg'
-import newsImg3 from '../../Assets/pictures/FaquelagePhoto2Square.jpg'
+import newsImg1 from '../../Assets/pictures/PlaceHolder_square_1.jpg'
+import newsImg2 from '../../Assets/pictures/Album_Cover_Questions.jpg'
+import newsImg3 from '../../Assets/pictures/Logo_square.jpg'
 
-import aboutImg1 from '../../Assets/pictures/Panter fabix.jpg'
-import aboutImg1_m from '../../Assets/pictures/Fabix.jpg'
-import aboutImg2 from '../../Assets/pictures/raphapuss.jpg'
-import aboutImg2_m from '../../Assets/pictures/Raphael.jpg'
-import aboutImg3 from '../../Assets/pictures/hase richy.jpg'
-import aboutImg3_m from '../../Assets/pictures/Richy.jpg'
+import aboutImg1 from '../../Assets/pictures/About_Panther_Fabix.jpg'
+import aboutImg1_m from '../../Assets/pictures/About_Portrait_Fabix.jpg'
+import aboutImg2 from '../../Assets/pictures/About_RaphaPuss.jpg'
+import aboutImg2_m from '../../Assets/pictures/About_Portrait_Raphael.jpg'
+import aboutImg3 from '../../Assets/pictures/About_Hase_Richy.jpg'
+import aboutImg3_m from '../../Assets/pictures/About_Portrait_Richy.jpg'
+
 
 
 export const TourAktuell = [
+    {
+      id: 11,
+      ort: 'no dates available',
+      datum: '',
+      location: '',
+      locationLink:'',
+      optionalerText: '',
+      optinalerLinkName: '',
+      link: '',
+    }, 
+];
+  
+
+export const TourVergangenheit = [
     {
       id: 10,
       ort: 'Erfurt',
@@ -21,10 +36,7 @@ export const TourAktuell = [
       optinalerLinkName: '',
       link: '',
     }, 
-];
-  
 
-export const TourVergangenheit = [
     {
       id: 9,
       ort: 'Magdeburg',
@@ -138,11 +150,12 @@ export const TourVergangenheit = [
     },
 ];
 
+
 export const NewsData = [
   {
     id: 3, 
     imgSrc: newsImg3,
-    title: 'Live in Concert!',
+    title: 'Last Concert',
     subtitle: 'Erfurt, 21.02.2025',
     text: '',
     link: 'https://www.jazzclub-erfurt.de/?b=1000077&c=ED1000281&s=djEt9gQNjql_lWVWsEcmByoZ0pOUh9_gIMuqJtfYYfUwimE=',
@@ -152,9 +165,9 @@ export const NewsData = [
   {
     id: 1,
     imgSrc: newsImg1,
-    title: 'ALBUM OUT NOW',
+    title: 'Album out now!',
     subtitle: '',
-    text: '',
+    text: 'Order via Bandcamp',
     link: 'https://faquelage.bandcamp.com/album/questions',
     linkName: 'CD Bestellen'
   },
@@ -162,9 +175,9 @@ export const NewsData = [
   {
     id: 2,
     imgSrc: newsImg2,
-    title: 'FEATURED VIDEO',
+    title: 'Featured Video',
     subtitle: '',
-    text: '',
+    text: '... and further content on Youtube!',
     link: 'https://www.youtube.com/watch?v=OXdOKobg5sA&list=PLLki_nU8n8w3MZEAN4uta_8cCAejmJHkn',
     linkName: 'Shapes in the Water'
   },

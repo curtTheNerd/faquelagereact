@@ -55,170 +55,189 @@ li {
 }
 
 .home {
-  flex-wrap: wrap;
-  width: 90%;
-  background: var(--backgroundColor2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 10rem;
-  padding-bottom: 3rem;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
 }
-.home .homeTitle {
-  font-size: 4rem;
+.home .bannerSection {
+  position: relative;
+  width: 100%;
+  height: 50vw;
+}
+.home .bannerSection .image {
+  position: absolute;
+  display: flex;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: 2.5s;
+}
+.home .bannerSection .fadeIn {
+  opacity: 1;
+  transition: 2.5s;
+}
+.home .bannerSection .fadeOut {
+  opacity: 0;
+  transition: 2.5s;
+}
+.home .titleSection {
+  position: relative;
+}
+.home .titleSection .homeTitle {
+  font-size: 4.5rem;
   color: var(--PrimaryColor);
-  text-shadow: 1px 1px 2px rgb(162, 120, 14);
+  text-shadow: 5px 5px 7px rgb(72, 54, 10);
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
 }
-.home .homeTitle .h1_2 {
+.home .titleSection .homeTitle .h1_2 {
   font-family: "Cedarville Cursive", "Helvetica", serif;
 }
-.home .subtitle {
-  position: relative;
+.home .titleSection .subtitle {
   font-size: 2rem;
   text-align: center;
   color: var(--PrimaryColor);
   font-style: italic;
-  padding-bottom: 2.5rem;
-}
-.home .homeBanner img {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-/*
-.slideShowContainer {
-    overflow: hidden;
-    position: relative;
-    width: 90%;
-    padding-top: 50px;
-    margin: auto;
+@media screen and (max-width: 800px) {
+  .home {
+    padding-top: 5.5rem;
+  }
+  .home .titleSection .homeTitle {
+    font-size: 3.5rem;
+  }
 }
-
-.slideShowImage {
-    width: 100%;
-    position: relative;
-    margin: 0 auto;
-    transition: left 0.5s;
-    left: 0;
+@media screen and (max-width: 550px) {
+  .home {
+    padding-top: 7rem;
+  }
+  .home .titleSection .homeTitle {
+    padding-top: 2.5rem;
+    font-size: 2.5rem;
+  }
+  .home .titleSection .subtitle {
+    font-size: 1.25rem;
+  }
 }
-*/
 .news {
   width: 90%;
-  background: var(--backgroundColor2);
   margin: 0 auto;
-  padding-top: 10rem;
-  padding-bottom: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
 }
 .news .newsTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--PrimaryColor);
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 5rem;
 }
 .news .newsSecContent {
   justify-content: center;
+  gap: 4rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 3rem;
 }
 .news .newsSecContent .newsCard {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
+  flex-direction: column;
+  justify-content: left;
+  max-width: 375px;
   max-height: auto;
-  overflow: hidden;
   border: 1px solid rgb(24, 20, 12);
-  border-radius: 4px;
-  background: var(--backgroundColor);
-  margin: 15px auto;
+  border-radius: 5px;
+  background: var(--backgroundColor2);
+  padding-bottom: 25px;
+  margin: 0 auto;
+  transition: 0.5s;
+  cursor: pointer;
 }
 .news .newsSecContent .newsCard:hover {
   transition: 1s;
+  transform: scale(1.05);
   box-shadow: 0 0 15px 15px rgb(19, 19, 19);
+  background-color: var(--backgroundColor1);
 }
 .news .newsSecContent .newsCard img {
-  width: 350px;
-  height: 350px;
-  margin: auto;
+  width: 375px;
+  width: 375px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-bottom: 0.5rem;
 }
 .news .newsSecContent .newsCard .newsCardInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 1.5rem;
   line-height: 1.5;
-  margin: auto;
 }
 .news .newsSecContent .newsCard .newsCardInfo .newsCardTitle {
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   color: var(--PrimaryColor);
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
 }
 .news .newsSecContent .newsCard .newsCardInfo .newsLinkName {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--PrimaryColor);
+  text-align: center;
   transition: 0.3s;
+  padding-top: 1rem;
 }
 .news .newsSecContent .newsCard .newsCardInfo .newsLinkName:hover {
-  color: var(--textColor);
+  color: rgb(255, 230, 167);
   transition: 0.3s;
 }
 .news .newsSecContent .newsCard .newsCardInfo .newsCardSubtitle, .news .newsSecContent .newsCard .newsCardInfo .newsText, .news .newsSecContent .newsCard .newsCardInfo .newsLink {
   font-size: 1.4rem;
+  text-align: center;
   color: var(--SecondaryColor);
   padding: 0 20px 0 20px;
-  margin: auto;
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 800px) {
   .news {
     width: 100%;
+    padding-top: 3.5rem;
   }
-  .news .newsSecContent .newsCard {
-    display: flex;
-    flex-direction: column;
-    max-height: auto;
-    width: 100%;
-  }
-  .news .newsSecContent .newsCard img {
-    margin: 1rem auto 2rem auto;
-    padding: 0.2rem;
-  }
-  .news .newsSecContent .newsCard .newsCardInfo {
-    margin: 0 auto 2rem auto;
-  }
-  .news .newsSecContent .newsCard .newsCardInfo .newsCardTitle {
-    font-size: 1.75rem;
-  }
-  .news .newsSecContent .newsCard .newsCardInfo .newsLinkName {
-    font-size: 1.5rem;
+  .news .newsTitle {
+    font-size: 2rem;
+    padding-bottom: 4rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .news {
-    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
   }
-  .news .newsSecContent .newsCard .newsCardInfo {
-    margin: 0 auto 2rem auto;
+  .news .newsTitle {
+    font-size: 1.5rem;
+    padding-bottom: 2.25rem;
   }
-  .news .newsSecContent .newsCard .newsCardInfo .newsCardTitle {
-    font-size: 1.35rem;
+  .news .newsSecContent .newsCard {
+    max-width: 300px;
   }
-  .news .newsSecContent .newsCard .newsCardInfo .newsLinkName {
-    font-size: 1.3rem;
+  .news .newsSecContent .newsCard img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 .about {
   width: 90%;
-  background: var(--backgroundColor2);
   margin: 0 auto;
   padding-top: 12rem;
   padding-bottom: 5rem;
@@ -266,19 +285,20 @@ li {
   border-radius: 5px;
   background: var(--backgroundColor1);
   padding-bottom: 25px;
-  margin: 0.5rem auto;
+  margin: 0 auto;
   transition: 0.5s;
+  cursor: pointer;
 }
 .about .aboutSecContent .aboutCard:hover {
   transition: 1s;
   transform: scale(1.05);
   box-shadow: 0 0 5px 5px var(--SecondaryColor);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--backgroundColor2);
   border: none;
 }
 .about .aboutSecContent .aboutCard img {
-  max-width: 375px;
-  max-width: 375px;
+  width: 375px;
+  height: 375px;
   -o-object-fit: cover;
      object-fit: cover;
   padding-bottom: 0.25rem;
@@ -310,67 +330,65 @@ li {
   padding: 0 20px 0 20px;
 }
 .about .modal {
-  display: block;
+  display: flex;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 2000;
+  overflow: hidden;
 }
 .about .modal .modalCard {
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  padding-top: 100px;
+  justify-self: center;
 }
 .about .modal .modalCard img {
-  max-width: 500px;
-  max-height: 500px;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-width: 600px;
+  max-height: 600px;
+  margin: auto;
 }
 .about .modal .modalCard .aboutCardInfo {
-  padding: 20px;
-  padding-left: 50px;
+  padding-left: 4rem;
   line-height: 1.5;
 }
-.about .modal .modalCard .aboutName {
+.about .modal .modalCard .aboutCardInfo .aboutName {
   font-size: 1.75rem;
   color: var(--PrimaryColor);
   padding-bottom: 15px;
   text-align: center;
 }
-.about .modal .modalCard .aboutLinkName {
-  font-size: 1.1rem;
+.about .modal .modalCard .aboutCardInfo .aboutLinkName {
+  font-size: 1.25rem;
   color: var(--PrimaryColor);
   padding-left: 5px;
   transition: 0.3s;
 }
-.about .modal .modalCard .aboutLinkName:hover {
+.about .modal .modalCard .aboutCardInfo .aboutLinkName:hover {
   color: rgb(255, 230, 167);
   transition: 0.3s;
 }
-.about .modal .modalCard .aboutInstrument, .about .modal .modalCard .aboutSkill, .about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
+.about .modal .modalCard .aboutCardInfo .aboutInstrument, .about .modal .modalCard .aboutCardInfo .aboutSkill, .about .modal .modalCard .aboutCardInfo .aboutLink, .about .modal .modalCard .aboutCardInfo .modalTextAdd {
   font-size: 1.1rem;
   color: var(--PrimaryColor);
   padding: 0 20px 0 20px;
 }
-.about .modal .modalCard .aboutLink, .about .modal .modalCard .modalTextAdd {
+.about .modal .modalCard .aboutCardInfo .aboutLink, .about .modal .modalCard .aboutCardInfo .modalTextAdd {
   padding-top: 15px;
 }
 .about .modal .modalClose {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 1rem;
+  right: 2.5rem;
   color: rgb(100, 100, 100);
-  font-size: 40px;
+  font-size: 3.5rem;
   font-weight: bolder;
   cursor: pointer;
   transition: 0.5s;
@@ -379,10 +397,9 @@ li {
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
   color: rgb(100, 100, 100);
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2.5rem;
   cursor: pointer;
   transition: 0.5s;
   -webkit-user-select: none;
@@ -391,10 +408,11 @@ li {
 }
 .about .modal .modalPrev {
   left: 0;
+  padding-left: 2rem;
 }
 .about .modal .modalNext {
   right: 0;
-  padding-right: 35px;
+  padding-right: 3rem;
 }
 .about .modal .modalClose:hover, .about .modal .modalPrev:hover, .about .modal .modalNext:hover {
   color: antiquewhite;
@@ -402,62 +420,103 @@ li {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 1000px) {
+  .about .modal .modalCard img {
+    max-width: 550px;
+    max-height: 550px;
+  }
+  .about .modal .modalCard .aboutCardInfo {
+    padding-left: 1rem;
+  }
+}
 @media screen and (max-width: 800px) {
   .about {
     width: 100%;
   }
-  .about .modal {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2000;
+  .about .presseText1 {
+    width: 95%;
+  }
+  .about .presseText2 {
+    width: 95%;
   }
   .about .modal .modalCard {
-    display: flex;
     flex-direction: column;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 40px;
   }
   .about .modal .modalCard img {
-    -o-object-position: center;
-       object-position: center;
-    -o-object-fit: cover;
-       object-fit: cover;
-    margin: auto;
-    padding: 1px;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  .about .modal .modalCard .aboutCardInfo {
+    padding: 0;
+  }
+  .about .modal .modalCard .aboutCardInfo .aboutName {
+    font-size: 1.75rem;
+    color: var(--PrimaryColor);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .about .modal .modalCard .aboutCardInfo .aboutInstrument, .about .modal .modalCard .aboutCardInfo .aboutSkill, .about .modal .modalCard .aboutCardInfo .aboutLink, .about .modal .modalCard .aboutCardInfo .modalTextAdd {
+    font-size: 1.1rem;
+    color: var(--PrimaryColor);
+    padding: 0 1rem 0 1rem;
+  }
+  .about .modal .modalCard .aboutCardInfo .aboutLink, .about .modal .modalCard .aboutCardInfo .modalTextAdd {
+    padding: 0;
   }
 }
 @media screen and (max-width: 550px) {
-  .about .aboutSecContent {
-    justify-content: center;
-  }
-  .about .aboutSecContent .aboutCard {
-    max-width: 350px;
-    margin: 0 auto;
-  }
   .about .aboutSecContent .aboutCard img {
-    max-width: 350px;
-    max-height: 350px;
+    width: 300px;
+    height: 300px;
+  }
+  .about .modal .modalCard img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .about .modal .modalCard .aboutCardInfo {
+    padding-top: 1.5rem;
+  }
+  .about .modal .modalCard .aboutCardInfo .aboutName {
+    font-size: 1.5rem;
+    color: var(--PrimaryColor);
+    padding-bottom: 0.5rem;
+  }
+  .about .modal .modalCard .aboutCardInfo .aboutInstrument, .about .modal .modalCard .aboutCardInfo .aboutSkill, .about .modal .modalCard .aboutCardInfo .aboutLink, .about .modal .modalCard .aboutCardInfo .modalTextAdd {
+    font-size: 1rem;
+    color: var(--PrimaryColor);
+    padding: 0 0.75rem 0 0.75rem;
+  }
+  .about .modal .modalClose {
+    top: 0;
+    right: 1rem;
+  }
+  .about .modal .modalPrev, .about .modal .modalNext {
+    font-size: 2.5rem;
+  }
+  .about .modal .modalPrev {
+    left: 0;
+    padding-left: 1rem;
+  }
+  .about .modal .modalNext {
+    right: 0;
+    padding-right: 1.25rem;
   }
 }
 .tour {
   width: 90%;
-  background: var(--backgroundColor2);
   margin: 0 auto;
   padding-top: 12rem;
   padding-bottom: 5rem;
 }
-.tour .tourTitle {
+.tour .tourTitle, .tour .tourTitle2 {
   font-size: 2rem;
   color: var(--PrimaryColor);
   text-align: center;
   margin: 0 auto;
   padding-bottom: 4rem;
+}
+.tour .tourTitle2 {
+  padding-top: 3rem;
 }
 .tour .tourSecContent {
   display: flex;
@@ -545,7 +604,6 @@ li {
 }
 .media {
   width: 90%;
-  background: var(--backgroundColor2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -559,7 +617,8 @@ li {
   color: var(--PrimaryColor);
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 .media .ytVideo {
   position: relative;
@@ -578,6 +637,9 @@ li {
 @media screen and (max-width: 959px) {
   .video {
     width: 100%;
+  }
+  .video .mediaTitle {
+    font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -603,7 +665,6 @@ li {
   margin: 0 auto;
   padding-top: 12rem;
   padding-bottom: 5rem;
-  background-color: var(--backgroundColor2);
 }
 .datenschutzMain .datenschutzTitle {
   display: flex;
@@ -641,5 +702,13 @@ li {
 @media screen and (max-width: 800px) {
   .datenschutzMain {
     width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .datenschutzMain {
+    width: 100%;
+  }
+  .datenschutzMain .datenschutzTitle {
+    font-size: 1.75rem;
   }
 }/*# sourceMappingURL=app.css.map */

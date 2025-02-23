@@ -24,7 +24,7 @@ const Tour = () => {
         }
       </section>
 
-      <h2 className='tourTitle'>Vergangene Shows</h2>
+      <h2 className='tourTitle2'>Vergangene Shows</h2>
       <section className="tourSecContent">
         {
           TourVergangenheit.map(({id, ort, datum, location, locationLink, optionalerText, optionalerLinkName, link}) => {

@@ -20,16 +20,16 @@ const Footer = () => {
     <section className='footer'>
 
       <div className='iconDiv flex'>
-        <a href="https://www.instagram.com/faquelage/?locale=en_US" className='iconLinks' target='_blank'>
+        <a href="https://www.instagram.com/faquelage/?locale=en_US" className='iconLinks' target='_blank' rel="noreferrer noopener">
           <BiLogoInstagramAlt className='icon instagram' />
         </a>
-        <a href="https://www.facebook.com/faquelage/" className='iconLinks' target='_blank'>
+        <a href="https://www.facebook.com/faquelage/" className='iconLinks' target='_blank' rel="noreferrer noopener">
           <FaFacebook className='icon facebook' />
         </a>
-        <a href="https://www.youtube.com/channel/UCQgfM9ENDqaf25Lm-AbaapA" className='iconLinks' target='_blank'>
+        <a href="https://www.youtube.com/channel/UCQgfM9ENDqaf25Lm-AbaapA" className='iconLinks' target='_blank' rel="noreferrer noopener">
           <FaYoutube className='icon youtube' />
         </a>
-        <a href="https://open.spotify.com/intl-de/album/1fmgk5J9jZjMylWKgvdnRI" className='iconLinks' target='_blank'>
+        <a href="https://open.spotify.com/intl-de/album/1fmgk5J9jZjMylWKgvdnRI" className='iconLinks' target='_blank' rel="noreferrer noopener">
           <FaSpotify className='icon spotify' />
         </a>
         <Link to="/datenschutz" className="iconLinks" onClick={handleScrollToTop}>
@@ -39,7 +39,7 @@ const Footer = () => {
 
       <div className="copyright">
         <FaRegCopyright className='copyrightIcon'/>
-        <h4 className="copyrightText">Copyright Faquelage 2024</h4>
+        <h4 className="copyrightText">Copyright Faquelage 2025</h4>
         <h4 className="copyrightTextBreaker">||</h4> 
         <Link to="/datenschutz" className="copyrightText dsLink" onClick={handleScrollToTop}>Impressum & Datenschutz</Link>
       </div>

@@ -6,6 +6,7 @@
   justify-content: space-between;
   background: var(--backgroundColor1);
   width: 100%;
+  height: 5rem;
   padding: 1rem;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
